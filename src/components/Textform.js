@@ -33,7 +33,6 @@ export default function Textform(props) {
   };
 
   const [text, settext] = useState("");
-  const str = "";
   return (
     <>
       <div
@@ -55,7 +54,7 @@ export default function Textform(props) {
           ></textarea>
         </div>
         <button
-          className="btn btn-primary mx-2 my-3"
+          className="btn btn-primary mx-2 my-2"
           onClick={uphandler}
           style={{
             backgroundColor: props.mode === "dark" ? "#2a1736" : "white",
@@ -66,7 +65,7 @@ export default function Textform(props) {
           Convert to uppercase
         </button>
         <button
-          className="btn btn-primary mx-2 my-3"
+          className="btn btn-primary mx-2 my-2"
           style={{
             backgroundColor: props.mode === "dark" ? "#2a1736" : "white",
             color: props.mode === "dark" ? "white" : "black",
@@ -77,7 +76,7 @@ export default function Textform(props) {
           Convert to lowercase
         </button>
         <button
-          className="btn btn-primary mx-2 my-3 btn btn-success "
+          className="btn btn-primary mx-2 my-2 btn btn-success "
           onClick={BaseEncoder}
           style={{
             backgroundColor: props.mode === "dark" ? "#2a1736" : "white",
@@ -88,7 +87,7 @@ export default function Textform(props) {
           BASE64
         </button>
         <button
-          className="btn btn-primary mx-2 my-3 btn btn-success"
+          className="btn btn-primary mx-2 my-2 btn btn-success"
           onClick={BaseDecoder}
           style={{
             backgroundColor: props.mode === "dark" ? "#2a1736" : "white",
@@ -99,7 +98,7 @@ export default function Textform(props) {
           DecodeBase64
         </button>
         <button
-          className="btn btn-primary mx-2 my-3 btn btn-success"
+          className="btn btn-primary mx-2 my-2 btn btn-success"
           onClick={copyhandler}
           style={{
             backgroundColor: props.mode === "dark" ? "#2a1736" : "white",
@@ -116,7 +115,7 @@ export default function Textform(props) {
       >
         <h1> Your Text Summary </h1>
         <p>
-          {text === str ? 0 : text.split(" ").length} Words and {text.length}{" "}
+          {text.split(" ").filter((element)=>{return element.length!==0}).length} Words and {text.length}{" "}
           Characters
         </p>
       </div>
