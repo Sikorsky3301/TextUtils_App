@@ -54,6 +54,7 @@ export default function Textform(props) {
           ></textarea>
         </div>
         <button
+          disabled={text.length === 0}
           className="btn btn-primary mx-2 my-2"
           onClick={uphandler}
           style={{
@@ -65,6 +66,7 @@ export default function Textform(props) {
           Convert to uppercase
         </button>
         <button
+          disabled={text.length === 0}
           className="btn btn-primary mx-2 my-2"
           style={{
             backgroundColor: props.mode === "dark" ? "#2a1736" : "white",
@@ -76,6 +78,7 @@ export default function Textform(props) {
           Convert to lowercase
         </button>
         <button
+          disabled={text.length === 0}
           className="btn btn-primary mx-2 my-2 btn btn-success "
           onClick={BaseEncoder}
           style={{
@@ -87,6 +90,7 @@ export default function Textform(props) {
           BASE64
         </button>
         <button
+          disabled={text.length === 0}
           className="btn btn-primary mx-2 my-2 btn btn-success"
           onClick={BaseDecoder}
           style={{
@@ -98,6 +102,7 @@ export default function Textform(props) {
           DecodeBase64
         </button>
         <button
+          disabled={text.length === 0}
           className="btn btn-primary mx-2 my-2 btn btn-success"
           onClick={copyhandler}
           style={{
