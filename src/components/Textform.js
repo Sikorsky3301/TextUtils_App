@@ -134,7 +134,7 @@ export default function Textform(props) {
         }}
       >
         <h4> Preview </h4>
-        <p>{text.length > 0 ? text : "Enter Something to Manipulate"}</p>
+        <p>{text.length > 0 ? text : "Nothing to Preview"}</p>
       </div>
     </>
   );
